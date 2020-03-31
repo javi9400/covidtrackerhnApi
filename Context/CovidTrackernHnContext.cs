@@ -23,7 +23,7 @@ namespace covidtrackerhnApi.Context
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseNpgsql("User Id=postgres;Password=password;Server=localhost;Port=5432;Database=covidtrackerhn;Integrated Security=true;Pooling=true;");
+                optionsBuilder.UseNpgsql("User Id=postgres;Password=mypassword;Server=localhost;Port=5432;Database=covidtrackerhn;Integrated Security=true;Pooling=true;");
             }
         }
 
@@ -44,5 +44,5 @@ namespace covidtrackerhnApi.Context
 
 
     }
-    }
+    
 }

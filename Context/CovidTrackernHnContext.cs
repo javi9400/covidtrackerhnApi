@@ -1,6 +1,6 @@
 using covidtrackerhnApi.Domain;
 using Microsoft.EntityFrameworkCore;
-
+using System.Configuration;
 namespace covidtrackerhnApi.Context
 {
     public class CovidTrackernHnContext:DbContext
@@ -17,14 +17,6 @@ namespace covidtrackerhnApi.Context
 
         public CovidTrackernHnContext()
         {
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseNpgsql("User Id=postgres;Password=mypassword;Server=localhost;Port=5432;Database=covidtrackerhn;Integrated Security=true;Pooling=true;");
-            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

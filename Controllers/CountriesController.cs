@@ -26,5 +26,26 @@ namespace covidtrackerhnApi.Controllers
              return countries;
 
          }
+
+
+          [HttpGet("{abbreviation}")]
+         public Country Find(string abbreviation)
+         {
+
+             var country= _repo.Find(abbreviation);
+
+             return country;
+
+         }
+
+          [HttpPost]
+         public ActionResult<Country> Add(Country country)
+         {
+
+             var addedCountry= _repo.add(country);
+
+           return addedCountry;
+
+         }
     }
 }

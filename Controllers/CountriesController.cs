@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using covidtrackerhnApi.Domain;
 using covidtrackerhnApi.Repository;
 using Microsoft.AspNetCore.Mvc;
+using covidtrackerhnApi.Context;
+using covidtrackerhnApi.Service.Countries;
 
 namespace covidtrackerhnApi.Controllers
 {
@@ -10,18 +12,19 @@ namespace covidtrackerhnApi.Controllers
     [Route("[controller]")]
      public class CountriesController:ControllerBase
     {
-        private readonly ICountryRepository _repo;
+        private readonly ICountryService _service;
 
-        public CountriesController()
+        public CountriesController(CovidTrackernHnContext context )
         {
-            _repo=new CountryRepositoryImpl();
+            _service=new CountryServiceImplm(context);
+            
         }
         
          [HttpGet]
          public IList<Country> FindAll()
          {
 
-             var countries= _repo.FindAll();
+             var countries= _service.FindAll();
 
              return countries;
 
@@ -32,7 +35,7 @@ namespace covidtrackerhnApi.Controllers
          public Country Find(string abbreviation)
          {
 
-             var country= _repo.Find(abbreviation);
+             var country= _service.Find(abbreviation);
 
              return country;
 
@@ -42,7 +45,7 @@ namespace covidtrackerhnApi.Controllers
          public ActionResult<Country> Add(Country country)
          {
 
-             var addedCountry= _repo.add(country);
+             var addedCountry= _service.add(country);
 
            return addedCountry;
 

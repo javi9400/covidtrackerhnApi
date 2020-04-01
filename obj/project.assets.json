@@ -904,19 +904,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Devjm\\.nuget\\packages\\": {}
+    "/Users/javiermayorga/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Devjm\\Documents\\Dev\\covidtrackerhnApi\\covidtrackerhnApi.csproj",
+      "projectUniqueName": "/Users/javiermayorga/Documents/Dev/covidtrackerhnApi/covidtrackerhnApi.csproj",
       "projectName": "covidtrackerhnApi",
-      "projectPath": "C:\\Users\\Devjm\\Documents\\Dev\\covidtrackerhnApi\\covidtrackerhnApi.csproj",
-      "packagesPath": "C:\\Users\\Devjm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Devjm\\Documents\\Dev\\covidtrackerhnApi\\obj\\",
+      "projectPath": "/Users/javiermayorga/Documents/Dev/covidtrackerhnApi/covidtrackerhnApi.csproj",
+      "packagesPath": "/Users/javiermayorga/.nuget/packages/",
+      "outputPath": "/Users/javiermayorga/Documents/Dev/covidtrackerhnApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Devjm\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/javiermayorga/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -973,7 +973,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
       }
     }
   }

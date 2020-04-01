@@ -14,7 +14,6 @@ namespace covidtrackerhnApi.Context
             : base(options)
         {
         }
-
         public CovidTrackernHnContext()
         {
         }

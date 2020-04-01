@@ -13,5 +13,7 @@ namespace covidtrackerhnApi.Domain
         public Country Country{ get; set; }
         
         public DateTime CreationDate { get; set; }
+
+        
     }
 }

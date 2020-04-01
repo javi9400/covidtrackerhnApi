@@ -19,8 +19,11 @@ namespace covidtrackerhnApi.Domain
 
         public string abbreaviation { get; private set; }
 
+
         public DateTime CreationDate { get; set; }
 
         public int isActive {get;set;}
+
+       
     }
 }

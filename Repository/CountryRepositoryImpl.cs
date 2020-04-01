@@ -10,12 +10,13 @@ namespace covidtrackerhnApi.Repository
 
         private  CovidTrackernHnContext _context;
 
-        public CountryRepositoryImpl()
+        public CountryRepositoryImpl(CovidTrackernHnContext context)
         {
-            _context=new CovidTrackernHnContext();
+            _context=context;
         }
         public Country add(Country country)
         {
+            
            _context.Countries.Add(country);
 
            return country;

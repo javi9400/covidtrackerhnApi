@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using covidtrackerhnApi.Domain;
 using covidtrackerhnApi.Repository;
-
+using covidtrackerhnApi.Context;
 namespace covidtrackerhnApi.Service.Countries
 {
     public class CountryServiceImplm : ICountryService
@@ -9,12 +9,13 @@ namespace covidtrackerhnApi.Service.Countries
 
         private ICountryRepository _repo;
 
-        public CountryServiceImplm()
+        public CountryServiceImplm(CovidTrackernHnContext context)
         {
-            _repo=new CountryRepositoryImpl();
+            _repo=new CountryRepositoryImpl(context);
         }
         public Country add(Country country)
         {
+            
            _repo.add(country);
 
            return country;
